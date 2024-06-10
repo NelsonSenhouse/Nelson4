@@ -32,16 +32,17 @@ func _process(delta):
 			global.is_dragging = false
 			sound.stream_paused = true
 			var tween = get_tree().create_tween()
-			#if is_inside_droppable:
-				#var x = body_ref.position.x + (text_box.size.x * (1 - 1 / scale.x))
-				#tween.tween_property(self, "position", Vector2(x, body_ref.position.y + 3), 0.2).set_ease(Tween.EASE_IN)
-			#else: 
-				#remove_child(self)
+			if is_inside_droppable:
+				var x = body_ref.position.x + (text_box.size.x * (1 - 1 / scale.x))
+				tween.tween_property(self, "position", Vector2(position.x, body_ref.position.y + 3), 0.2).set_ease(Tween.EASE_IN)
+		elif Input.is_action_just_pressed("Scroll_d"):
+			queue_free()
 		elif Input.is_action_just_released("Wheel"):
 			if scale == Vector2(1, 1):
 				scale = Vector2(2, 1)
 			else:
 				scale = Vector2(1, 1)
+		
 
 
 func _on_area_2d_body_entered(body: StaticBody2D):
