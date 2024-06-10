@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxoev3y22dl1i"]
+
+[ext_resource type="Script" path="res://object.gd" id="1_8v4n8"]
+[ext_resource type="FontFile" uid="uid://4qwlkho5fu6f" path="res://light_pixel-7.ttf" id="2_5pwto"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_7il7r"]
+[ext_resource type="Script" path="res://Note.gd" id="5_c1ftw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqt8b"]
+size = Vector2(57, 69)
+
+[node name="Note" type="Node2D"]
+script = ExtResource("1_8v4n8")
+
+[node name="Text" type="TextEdit" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -37.0
+offset_right = 31.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_5pwto")
+theme_override_font_sizes/font_size = 20
+text = " 
+ "
+
+[node name="Area2D" type="Area2D" parent="." groups=["notes"]]
+unique_name_in_owner = true
+script = ExtResource("3_7il7r")
+
+[node name="Note" type="AudioStreamPlayer2D" parent="Area2D"]
+unique_name_in_owner = true
+volume_db = 10.0
+script = ExtResource("5_c1ftw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4.5, -2.5)
+shape = SubResource("RectangleShape2D_lqt8b")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

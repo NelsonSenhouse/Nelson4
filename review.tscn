@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://jlu32yx112oj"]
+
+[ext_resource type="FontFile" uid="uid://4qwlkho5fu6f" path="res://light_pixel-7.ttf" id="1_o4787"]
+[ext_resource type="Script" path="res://Button2.gd" id="2_14ovh"]
+
+[node name="Review" type="Node2D"]
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 5.0
+offset_top = -35.0
+offset_right = 1510.0
+offset_bottom = 116.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_o4787")
+theme_override_font_sizes/font_size = 60
+text = "
+Review:"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_top = 101.0
+offset_right = 1502.0
+offset_bottom = 757.0
+theme_override_fonts/font = ExtResource("1_o4787")
+theme_override_font_sizes/font_size = 25
+text = "
+Complete chromatic scale: C-C#-D-D#-E-F-F#-G-G#-A-A#-B 
+Reminder: Every sharp has an equivalent flat and vice versa (i.e. C# = Db)
+
+Half-Step: One note increase/decrease in the chromatic scale (i.e. C to C# is one half-step, and C to D is two)
+
+Whole-Step: Two half-steps
+
+Major Third: Four half-steps up from starting note (C to E)
+
+Minor Third: Three half-steps up from starting note (C to Eb/D#)
+
+Chord: Consists of triad (three notes) or more
+
+Major Triad: Consists of major third from root note then minor third
+
+Minor Triad: Consists of minor third from root note then major third
+
+Scale Degree: Note in a scale (G is the 5th degree of the C major Scale)
+Reminder: Triads contain 1st, 3rd, and 5th scale degrees (i.e. C major chord: C, E, G)"
+wrap_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1185.0
+offset_top = 16.0
+offset_right = 1486.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_o4787")
+theme_override_font_sizes/font_size = 40
+text = "Back"
+flat = true
+script = ExtResource("2_14ovh")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

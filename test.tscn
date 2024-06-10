@@ -1,0 +1,128 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxxknxio5yqtm"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_8yvg8"]
+[ext_resource type="FontFile" uid="uid://4qwlkho5fu6f" path="res://light_pixel-7.ttf" id="2_jufpd"]
+[ext_resource type="Script" path="res://Question.gd" id="3_qgahf"]
+[ext_resource type="Script" path="res://Answers.gd" id="4_wijtp"]
+[ext_resource type="Script" path="res://AA.gd" id="5_vvv4h"]
+[ext_resource type="Script" path="res://BB.gd" id="6_4bpua"]
+[ext_resource type="Script" path="res://CC.gd" id="7_4u3ya"]
+[ext_resource type="Script" path="res://DD.gd" id="8_164la"]
+[ext_resource type="Script" path="res://Score.gd" id="9_5u53v"]
+[ext_resource type="Script" path="res://Back.gd" id="10_ac60t"]
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_8yvg8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -53.0
+offset_top = -33.0
+offset_right = 1523.0
+offset_bottom = 758.0
+color = Color(0.333333, 0, 0.337255, 1)
+
+[node name="Question" type="TextEdit" parent="."]
+unique_name_in_owner = true
+offset_left = -2.0
+offset_top = -18.0
+offset_right = 1529.0
+offset_bottom = 124.0
+mouse_filter = 2
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.0485443, 0.269483, 0.943191, 1)
+theme_override_fonts/font = ExtResource("2_jufpd")
+theme_override_font_sizes/font_size = 39
+text = "
+words"
+wrap_mode = 1
+script = ExtResource("3_qgahf")
+
+[node name="Answers" type="TextEdit" parent="."]
+unique_name_in_owner = true
+offset_left = 318.0
+offset_top = 207.0
+offset_right = 789.0
+offset_bottom = 622.0
+mouse_filter = 2
+script = ExtResource("4_wijtp")
+
+[node name="A" type="Button" parent="Answers"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 100.0
+offset_top = 13.0
+offset_right = 364.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_jufpd")
+theme_override_font_sizes/font_size = 38
+text = "test"
+script = ExtResource("5_vvv4h")
+
+[node name="B" type="Button" parent="Answers"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 100.0
+offset_top = 109.0
+offset_right = 364.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_jufpd")
+theme_override_font_sizes/font_size = 38
+script = ExtResource("6_4bpua")
+
+[node name="C" type="Button" parent="Answers"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 100.0
+offset_top = 205.0
+offset_right = 364.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_jufpd")
+theme_override_font_sizes/font_size = 38
+script = ExtResource("7_4u3ya")
+
+[node name="D" type="Button" parent="Answers"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 100.0
+offset_top = 301.0
+offset_right = 364.0
+offset_bottom = 394.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_jufpd")
+theme_override_font_sizes/font_size = 38
+script = ExtResource("8_164la")
+
+[node name="Score" type="TextEdit" parent="."]
+unique_name_in_owner = true
+offset_left = 1167.0
+offset_top = 571.0
+offset_right = 1474.0
+offset_bottom = 673.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_jufpd")
+theme_override_font_sizes/font_size = 30
+text = "
+     test"
+script = ExtResource("9_5u53v")
+
+[node name="Back" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 1167.0
+offset_top = 456.0
+offset_right = 1468.0
+offset_bottom = 547.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_jufpd")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("10_ac60t")
+
+[connection signal="pressed" from="Answers/A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="Answers/B" to="." method="_on_b_pressed"]
+[connection signal="pressed" from="Answers/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="Answers/D" to="." method="_on_d_pressed"]
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

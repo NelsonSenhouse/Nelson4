@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccbt6hpn53ic2"]
+
+[ext_resource type="Script" path="res://Review_Button.gd" id="4_bbh4d"]
+[ext_resource type="Script" path="res://Credits_Button.gd" id="5_88vek"]
+[ext_resource type="FontFile" uid="uid://4qwlkho5fu6f" path="res://light_pixel-7.ttf" id="6_c1yqm"]
+[ext_resource type="Script" path="res://Test_Button.gd" id="7_r8vao"]
+[ext_resource type="Script" path="res://Produce_Button.gd" id="8_geptb"]
+
+[node name="Start Screen" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -54.0
+offset_top = -40.0
+offset_right = 1551.0
+offset_bottom = 783.0
+color = Color(0.333333, 0, 0.337255, 1)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_top = -10.0
+offset_right = 1500.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("6_c1yqm")
+theme_override_font_sizes/font_size = 60
+text = "
+      Welcome to the Music Lab!"
+
+[node name="Test_Button" type="Button" parent="."]
+offset_left = 950.0
+offset_top = 200.0
+offset_right = 1372.0
+offset_bottom = 300.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.0214346, 0.0214346, 0.0214346, 1)
+theme_override_fonts/font = ExtResource("6_c1yqm")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "Test"
+icon_alignment = 1
+script = ExtResource("7_r8vao")
+
+[node name="Produce_Button" type="Button" parent="."]
+offset_left = 950.0
+offset_top = 310.0
+offset_right = 1372.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("6_c1yqm")
+theme_override_font_sizes/font_size = 40
+text = "Produce"
+script = ExtResource("8_geptb")
+
+[node name="Review_Button" type="Button" parent="."]
+offset_left = 950.0
+offset_top = 420.0
+offset_right = 1372.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("6_c1yqm")
+theme_override_font_sizes/font_size = 40
+text = "Review"
+script = ExtResource("4_bbh4d")
+
+[node name="Credits_Button" type="Button" parent="."]
+offset_left = 76.0
+offset_top = 310.0
+offset_right = 498.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("6_c1yqm")
+theme_override_font_sizes/font_size = 40
+text = "Credits"
+script = ExtResource("5_88vek")
+
+[connection signal="pressed" from="Test_Button" to="Test_Button" method="_on_pressed"]
+[connection signal="pressed" from="Produce_Button" to="Produce_Button" method="_on_pressed"]
+[connection signal="pressed" from="Review_Button" to="Review_Button" method="_on_pressed"]
+[connection signal="pressed" from="Credits_Button" to="Credits_Button" method="_on_pressed"]

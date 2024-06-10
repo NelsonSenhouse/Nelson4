@@ -1,0 +1,253 @@
+[gd_scene load_steps=39 format=3 uid="uid://dl1npp80pb2yu"]
+
+[ext_resource type="PackedScene" uid="uid://skjagbwdj6lm" path="res://drop_box.tscn" id="1_1v07w"]
+[ext_resource type="PackedScene" uid="uid://cxoev3y22dl1i" path="res://note.tscn" id="2_p7hia"]
+[ext_resource type="Script" path="res://C(L).gd" id="3_e837a"]
+[ext_resource type="Script" path="res://E(L).gd" id="3_jmvne"]
+[ext_resource type="Script" path="res://Play_Line.gd" id="3_l60aa"]
+[ext_resource type="Script" path="res://Snare.gd" id="3_mri4u"]
+[ext_resource type="FontFile" uid="uid://4qwlkho5fu6f" path="res://light_pixel-7.ttf" id="4_4vsil"]
+[ext_resource type="Script" path="res://F(L).gd" id="4_ib4s4"]
+[ext_resource type="Script" path="res://Kick.gd" id="4_qwdvq"]
+[ext_resource type="Script" path="res://HH.gd" id="5_k426m"]
+[ext_resource type="Script" path="res://F#(L).gd" id="5_mf87k"]
+[ext_resource type="Texture2D" uid="uid://cbyadqihqj5lh" path="res://play_button.png" id="6_1nqkm"]
+[ext_resource type="Script" path="res://G(L).gd" id="6_rhuru"]
+[ext_resource type="Script" path="res://Crash.gd" id="6_y8ew5"]
+[ext_resource type="Script" path="res://FT.gd" id="7_ilaf0"]
+[ext_resource type="Script" path="res://G#(L).gd" id="7_iolg4"]
+[ext_resource type="Script" path="res://MT.gd" id="8_52onp"]
+[ext_resource type="Script" path="res://A(L).gd" id="8_ydiye"]
+[ext_resource type="Script" path="res://HT.gd" id="9_5k7m3"]
+[ext_resource type="Script" path="res://A#(L).gd" id="9_shxi0"]
+[ext_resource type="Script" path="res://B(L).gd" id="10_6ifou"]
+[ext_resource type="Script" path="res://C#(L).gd" id="12_egc74"]
+[ext_resource type="Script" path="res://D(L).gd" id="13_ei1rb"]
+[ext_resource type="Script" path="res://Back2.gd" id="13_wrh8p"]
+[ext_resource type="Script" path="res://D#(L).gd" id="14_f14w7"]
+[ext_resource type="Script" path="res://E(H).gd" id="15_e47ti"]
+[ext_resource type="Script" path="res://F(H).gd" id="16_5kdbt"]
+[ext_resource type="Script" path="res://F#(H).gd" id="17_6h4h1"]
+[ext_resource type="Script" path="res://G(H).gd" id="18_espeb"]
+[ext_resource type="Script" path="res://G#(H).gd" id="19_8ea0i"]
+[ext_resource type="Script" path="res://A(H).gd" id="20_ek1wo"]
+[ext_resource type="Script" path="res://A#(H).gd" id="21_g0wps"]
+[ext_resource type="Script" path="res://B(H).gd" id="22_adjnv"]
+[ext_resource type="Script" path="res://C(H).gd" id="23_hrdyb"]
+[ext_resource type="Script" path="res://C#(H).gd" id="24_okkem"]
+[ext_resource type="Script" path="res://D(H).gd" id="25_dxkyf"]
+[ext_resource type="Script" path="res://D#(H).gd" id="26_60qm2"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d8375"]
+a = Vector2(-5, -200)
+b = Vector2(-4, 504)
+
+[node name="Produce" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -29.0
+offset_top = -56.0
+offset_right = 1562.0
+offset_bottom = 794.0
+mouse_filter = 2
+color = Color(0.332259, 8.0619e-05, 0.335779, 1)
+
+[node name="Drop_Box" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 710)
+
+[node name="Drop_Box2" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 110)
+
+[node name="Drop_Box3" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 260)
+
+[node name="Drop_Box4" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 335)
+
+[node name="Drop_Box5" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 560)
+
+[node name="Drop_Box6" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 410)
+
+[node name="Drop_Box7" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 485)
+
+[node name="Drop_Box8" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 185)
+
+[node name="Drop_Box9" parent="." instance=ExtResource("1_1v07w")]
+position = Vector2(552, 635)
+
+[node name="E(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(40, 267)
+script = ExtResource("3_jmvne")
+
+[node name="F(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(102, 267)
+script = ExtResource("4_ib4s4")
+
+[node name="F#(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(164, 267)
+script = ExtResource("5_mf87k")
+
+[node name="G(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(226, 267)
+script = ExtResource("6_rhuru")
+
+[node name="G#(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(288, 267)
+script = ExtResource("7_iolg4")
+
+[node name="A(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(350, 267)
+script = ExtResource("8_ydiye")
+
+[node name="A#(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(412, 267)
+script = ExtResource("9_shxi0")
+
+[node name="B(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(40, 344)
+script = ExtResource("10_6ifou")
+
+[node name="C(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(102, 344)
+script = ExtResource("3_e837a")
+
+[node name="C#(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(164, 344)
+script = ExtResource("12_egc74")
+
+[node name="D(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(226, 344)
+script = ExtResource("13_ei1rb")
+
+[node name="D#(L)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(288, 344)
+script = ExtResource("14_f14w7")
+
+[node name="E(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(40, 459)
+script = ExtResource("15_e47ti")
+
+[node name="F(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(102, 459)
+script = ExtResource("16_5kdbt")
+
+[node name="F#(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(164, 459)
+script = ExtResource("17_6h4h1")
+
+[node name="G(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(226, 459)
+script = ExtResource("18_espeb")
+
+[node name="G#(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(288, 459)
+script = ExtResource("19_8ea0i")
+
+[node name="A(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(350, 459)
+script = ExtResource("20_ek1wo")
+
+[node name="A#(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(412, 459)
+script = ExtResource("21_g0wps")
+
+[node name="B(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(40, 536)
+script = ExtResource("22_adjnv")
+
+[node name="C(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(102, 536)
+script = ExtResource("23_hrdyb")
+
+[node name="C#(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(164, 536)
+script = ExtResource("24_okkem")
+
+[node name="D(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(226, 536)
+script = ExtResource("25_dxkyf")
+
+[node name="D#(H)" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(288, 536)
+script = ExtResource("26_60qm2")
+
+[node name="Snare" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(40, 125)
+script = ExtResource("3_mri4u")
+
+[node name="Kick" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(164, 125)
+script = ExtResource("4_qwdvq")
+
+[node name="HH" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(102, 125)
+script = ExtResource("5_k426m")
+
+[node name="Crash" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(226, 125)
+script = ExtResource("6_y8ew5")
+
+[node name="FT" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(412, 125)
+script = ExtResource("7_ilaf0")
+
+[node name="MT" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(350, 125)
+script = ExtResource("8_52onp")
+
+[node name="HT" parent="." instance=ExtResource("2_p7hia")]
+position = Vector2(288, 125)
+script = ExtResource("9_5k7m3")
+
+[node name="Play_Line" type="Area2D" parent="."]
+script = ExtResource("3_l60aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Play_Line"]
+position = Vector2(521, 267)
+shape = SubResource("SegmentShape2D_d8375")
+
+[node name="ColorRect" type="ColorRect" parent="Play_Line"]
+offset_left = 514.0
+offset_top = 67.0
+offset_right = 520.0
+offset_bottom = 746.0
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_top = -29.0
+offset_right = 1496.0
+offset_bottom = 75.0
+mouse_filter = 2
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("4_4vsil")
+theme_override_font_sizes/font_size = 40
+text = "
+Library            Sound Board"
+
+[node name="Play" type="Button" parent="TextEdit"]
+layout_mode = 0
+offset_left = 975.0
+offset_top = 24.0
+offset_right = 1040.0
+offset_bottom = 105.0
+icon = ExtResource("6_1nqkm")
+
+[node name="Back" type="Button" parent="."]
+offset_left = 9.0
+offset_top = 644.0
+offset_right = 310.0
+offset_bottom = 735.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("4_4vsil")
+theme_override_font_sizes/font_size = 30
+text = "Back"
+script = ExtResource("13_wrh8p")
+
+[connection signal="area_entered" from="Play_Line" to="Play_Line" method="_on_area_entered"]
+[connection signal="area_exited" from="Play_Line" to="Play_Line" method="_on_area_exited"]
+[connection signal="pressed" from="TextEdit/Play" to="Play_Line" method="_on_button_pressed"]
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
