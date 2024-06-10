@@ -45,4 +45,15 @@ text = "Back"
 flat = true
 script = ExtResource("2_kx0ee")
 
+[node name="LinkButton" type="LinkButton" parent="."]
+offset_left = 1116.0
+offset_top = 440.0
+offset_right = 1389.0
+offset_bottom = 593.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_s7836")
+theme_override_font_sizes/font_size = 40
+text = "Link Here"
+uri = "https://www.reddit.com/r/edmproduction/comments/4ew9ut/free_sample_pack_of_my_acoustic_drum_kit_real/"
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
