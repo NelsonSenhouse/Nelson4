@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://c26tjujm3wh4d"]
+
+[ext_resource type="FontFile" uid="uid://4qwlkho5fu6f" path="res://light_pixel-7.ttf" id="1_s7836"]
+[ext_resource type="Script" path="res://Button3.gd" id="2_kx0ee"]
+
+[node name="Credits" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_top = -37.0
+offset_right = 1507.0
+offset_bottom = 128.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_s7836")
+theme_override_font_sizes/font_size = 60
+text = "
+Credits:"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_top = 128.0
+offset_right = 1544.0
+offset_bottom = 783.0
+theme_override_fonts/font = ExtResource("1_s7836")
+theme_override_font_sizes/font_size = 40
+text = "
+Idea - Me
+
+Code - Me
+
+Guitar Sound Effects - Me
+
+Drumset Sound Effects - Geo747 on Reddit
+
+Thank You "
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1178.0
+offset_top = 20.0
+offset_right = 1479.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_s7836")
+theme_override_font_sizes/font_size = 40
+text = "Back"
+flat = true
+script = ExtResource("2_kx0ee")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

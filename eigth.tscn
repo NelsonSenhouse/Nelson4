@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6n1y1vfx46u7"]
+
+[ext_resource type="Script" path="res://object.gd" id="1_mh0p0"]
+[ext_resource type="FontFile" uid="uid://4qwlkho5fu6f" path="res://light_pixel-7.ttf" id="2_wgvo6"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_6f4rr"]
+[ext_resource type="AudioStream" uid="uid://bbrpnthsyifkm" path="res://guitar.mp3" id="4_wtq5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqt8b"]
+size = Vector2(48, 69)
+
+[node name="Note" type="Node2D"]
+script = ExtResource("1_mh0p0")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -37.0
+offset_right = 25.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("2_wgvo6")
+theme_override_font_sizes/font_size = 20
+text = " 
+ E"
+
+[node name="Area2D" type="Area2D" parent="." groups=["notes"]]
+unique_name_in_owner = true
+script = ExtResource("3_6f4rr")
+
+[node name="Note" type="AudioStreamPlayer2D" parent="Area2D"]
+unique_name_in_owner = true
+stream = ExtResource("4_wtq5j")
+volume_db = 24.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_lqt8b")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
